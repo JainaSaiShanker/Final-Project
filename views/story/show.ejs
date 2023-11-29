@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+    <br>
+    <div class="text-center">
+        <h2><%= story.title %></h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Posted on: <%= story.createdAt %></p>
+            <p>Topic: <%= story.topic %></p>
+            <p>Host: <%= story.host %></p>
+            <p>Location: <%= story.location %></p>
+            <p>Date: <%= story.when %></p>
+            <p>Start Time: <%= story.start %></p>
+            <p>End Time: <%= story.end %></p>
+        </div>
+        <div class="col-md-6">
+            <img src="<%= story.image %>" alt="Image" class="img-fluid">
+        </div>
+    </div>
+    <div class="mt-3">
+        <h4>Details:</h4>
+        <p><%= story.details %></p>
+    </div>
+    <div class="mt-3">
+        <form>
+            <button type="submit" formmethod="get" formaction="/stories/<%= story.id %>/edit" class="btn btn-primary">Edit</button>
+            <button type="submit" formmethod="post" formaction="/stories/<%= story.id %>?_method=DELETE" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<%- include('../partials/footer.ejs') %>

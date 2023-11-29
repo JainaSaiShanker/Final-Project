@@ -1,0 +1,76 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+    <br>
+    <div class="text-center">
+        <h2>Edit Connection</h2>
+    </div>
+    <form method="POST" action="/stories/<%= story.id %>?_method=PUT" style="padding-top: 10px;">
+        <div class="form-group row">
+            <label for="topic" class="col-sm-2 col-form-label">Topic</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="topic" name="topic" value="<%= story.topic %>" placeholder="Topic" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="title" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="title" name="title" value="<%= story.title %>" placeholder="Title" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="host" class="col-sm-2 col-form-label">Host</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="host" name="host" value="<%= story.host %>" placeholder="Host" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="details" class="col-sm-2 col-form-label">Details</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="details" name="details" placeholder="Description" required><%= story.details %></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="location" class="col-sm-2 col-form-label">Where</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="location" name="location" value="<%= story.location %>" placeholder="Location" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="when" class="col-sm-2 col-form-label">When</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="when" name="when" value="<%= story.when %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="start" class="col-sm-2 col-form-label">Start</label>
+            <div class="col-sm-10">
+                <input type="time" class="form-control" id="start" name="start" value="<%= story.start %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="end" class="col-sm-2 col-form-label">End</label>
+            <div class="col-sm-10">
+                <input type="time" class="form-control" id="end" name="end" value="<%= story.end %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="image" class="col-sm-2 col-form-label">Image</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="image" name="image" value="<%= story.image %>" placeholder="URL of Image" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Update Connection</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<%- include('../partials/footer.ejs') %>

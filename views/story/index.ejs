@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') %>
+<br>
+<div class="container">
+  <div class="content">
+    <div class="row">
+      <% if (categories.length) { %>
+        <% categories.forEach(category => { %>
+          <div class="col-md-4"> 
+            <h2><%= category %></h2>
+            <ul>
+              <% stories
+                .filter(story => story.topic === category)
+                .forEach(story => { %>
+                  <li>
+                    <a href="/stories/<%= story.id %>"><%= story.title %></a>
+                  </li>
+              <% }); %>
+            </ul>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p>No stories yet</p>
+      <% } %>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>
