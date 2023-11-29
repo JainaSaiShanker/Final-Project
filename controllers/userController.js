@@ -1,6 +1,5 @@
 const model = require('../models/user');
 const Story = require('../models/story');
-const { UserController } = require('moongose/controller');
 
 exports.new = (req, res)=>{
         return res.render('./user/new');
