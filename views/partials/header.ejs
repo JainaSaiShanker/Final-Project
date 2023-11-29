@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Index</title>
+    <base href="/">
+    
+</head>
+<body>
+    <header> 
+        <div class="d-flex flex-column flex-md-row align-items-center p-3  bg-white border-bottom box-shadow">
+            <a href="<%= locals.rootPath %>">
+                <img src="images/logo.png" alt="Logo" width="35" height="35">
+            </a>
+            <h5 class="my-0 mr-md-auto font-weight-normal">
+                <a href="/" class="custom-link">Breakmates</a>
+            </h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="/stories/new">Start a new Connection</a>
+                <a class="p-2 text-dark" href="/user/login">Login</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="/user/signup">Sign up</a>
+        </div>
+    </header>
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stories">Connections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item disabled">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>                
+            </div>
+        </nav>
+    </div>
